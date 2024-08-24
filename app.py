@@ -5,7 +5,7 @@ from transformers import LlamaForCausalLM, LlamaTokenizer
 
 app = Flask(__name__)
 
-model_name = "meta-llama/Llama-2-7b"
+model_name = "meta-llama/Llama-2-7b-chat-hf"
 hf_token = os.getenv("HF_TOKEN")
 model = LlamaForCausalLM.from_pretrained(model_name, use_auth_token=hf_token)
 tokenizer = LlamaTokenizer.from_pretrained(model_name, use_auth_token=hf_token)
